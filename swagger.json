@@ -1,0 +1,1336 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "MockApi"
+  },
+  "host": "mockapi.scalinotechnologies.com",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/api/v1/auth/getNames": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "Auth_GetNames",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/getUnits": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "operationId": "Auth_GetUnits",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/insertTeam": {
+      "post": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_InsertTeam",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TeamModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/updateTeam": {
+      "put": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_UpdateTeam",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TeamModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/deleteTeam/{id}": {
+      "delete": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_DeleteTeam",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/getTeams": {
+      "get": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_GetTeams",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/getTeamById": {
+      "get": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_GetTeamById",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/insertTestimonial": {
+      "post": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_InsertTestimonial",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TestimonialModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/updateTestimonial": {
+      "put": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_UpdateTestimonial",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TestimonialModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/deleteTestimonial/{id}": {
+      "delete": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_DeleteTestimonial",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/getTestimonials": {
+      "get": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_GetTestimonials",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/getTestimonialById": {
+      "get": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_GetTestimonialById",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/insertOpeningHour": {
+      "post": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_InsertOpeningHour",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/OpeningHourModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/updateOpeningHour": {
+      "put": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_UpdateOpeningHour",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/OpeningHourModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/deleteOpeningHour/{id}": {
+      "delete": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_DeleteOpeningHour",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/getOpeningHours": {
+      "get": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_GetOpeningHours",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/getOpeningHourById": {
+      "get": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_GetOpeningHourById",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/insertContactUs": {
+      "post": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_InsertContactUs",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ContactUsModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/deleteContactUs/{id}": {
+      "delete": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_DeleteContactUs",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/getContactUs": {
+      "get": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_GetContactUs",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/getContactUsById": {
+      "get": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_GetContactUsById",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/insertReservation": {
+      "post": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_InsertReservation",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ReservationModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/deleteReservation/{id}": {
+      "delete": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_DeleteReservation",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/getReservation": {
+      "get": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_GetReservation",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/cafe/getReservationById": {
+      "get": {
+        "tags": [
+          "Cafe"
+        ],
+        "operationId": "Cafe_GetReservationById",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/menu/insertMenuCategory": {
+      "post": {
+        "tags": [
+          "Menu"
+        ],
+        "operationId": "Menu_InsertMenuCategory",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/MenuCategoryModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/menu/updateMenuCategory": {
+      "put": {
+        "tags": [
+          "Menu"
+        ],
+        "operationId": "Menu_UpdateMenuCategory",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/MenuCategoryModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/menu/deleteMenuCategory/{id}": {
+      "delete": {
+        "tags": [
+          "Menu"
+        ],
+        "operationId": "Menu_DeleteMenuCategory",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/menu/getMenuCategories": {
+      "get": {
+        "tags": [
+          "Menu"
+        ],
+        "operationId": "Menu_GetMenuCategories",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/menu/getMenuCategoryById": {
+      "get": {
+        "tags": [
+          "Menu"
+        ],
+        "operationId": "Menu_GetMenuCategoryById",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/menu/insertMenu": {
+      "post": {
+        "tags": [
+          "Menu"
+        ],
+        "operationId": "Menu_InsertMenu",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/MenuModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/menu/updateMenu": {
+      "put": {
+        "tags": [
+          "Menu"
+        ],
+        "operationId": "Menu_UpdateMenu",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "model",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/MenuModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/menu/deleteMenu/{id}": {
+      "delete": {
+        "tags": [
+          "Menu"
+        ],
+        "operationId": "Menu_DeleteMenu",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/menu/getMenus": {
+      "get": {
+        "tags": [
+          "Menu"
+        ],
+        "operationId": "Menu_GetMenus",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/menu/getMenuById": {
+      "get": {
+        "tags": [
+          "Menu"
+        ],
+        "operationId": "Menu_GetMenuById",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResponseWrapper"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ResponseWrapper": {
+      "type": "object",
+      "properties": {
+        "ResponseCode": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Message": {
+          "type": "string"
+        },
+        "Response": {
+          "type": "object"
+        }
+      }
+    },
+    "TeamModel": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Designation": {
+          "type": "string"
+        },
+        "SubText": {
+          "type": "string"
+        },
+        "Base64Image": {
+          "type": "string"
+        },
+        "ImageFileName": {
+          "type": "string"
+        },
+        "ExistingImagePath": {
+          "type": "string"
+        }
+      }
+    },
+    "TestimonialModel": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "CustomerName": {
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        },
+        "Rating": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Base64CustomerImage": {
+          "type": "string"
+        },
+        "CustomerImageFileName": {
+          "type": "string"
+        },
+        "CustomerExistingImagePath": {
+          "type": "string"
+        }
+      }
+    },
+    "OpeningHourModel": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "DayRange": {
+          "type": "string"
+        },
+        "TimeRange": {
+          "type": "string"
+        },
+        "IsClosed": {
+          "type": "boolean"
+        }
+      }
+    },
+    "ContactUsModel": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Email": {
+          "type": "string"
+        },
+        "Message": {
+          "type": "string"
+        },
+        "IsViewed": {
+          "type": "boolean"
+        },
+        "CreatedOn": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "ReservationModel": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "FullName": {
+          "type": "string"
+        },
+        "PhoneNo": {
+          "type": "string"
+        },
+        "Time": {
+          "type": "string"
+        },
+        "Date": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "BookingCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Comment": {
+          "type": "string"
+        },
+        "CreatedOn": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "MenuCategoryModel": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "SubText": {
+          "type": "string"
+        },
+        "Priority": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
+    },
+    "MenuModel": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "CategoryId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        },
+        "Price": {
+          "format": "double",
+          "type": "number"
+        },
+        "OfferPrice": {
+          "format": "double",
+          "type": "number"
+        },
+        "TagName": {
+          "type": "string"
+        },
+        "IsActive": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}
